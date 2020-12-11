@@ -14,6 +14,7 @@
 	}
 	:global(body) {
 		@apply text-white;
+		background-color: #1F2937;
 	}
 	:global(p) {
 		@apply py-2;
@@ -33,6 +34,12 @@
 	:global(a) {
 		@apply underline;
 	}
+	:global(img) {
+		display: block;
+		margin: auto;
+		max-width: 100%;
+	}
+
 </style>
 
 <SideNav {open}/>

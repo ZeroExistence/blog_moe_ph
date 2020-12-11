@@ -1,5 +1,6 @@
 # Custom ignore
 __sapper__/
+static/index.css
 
 # Logs
 logs
