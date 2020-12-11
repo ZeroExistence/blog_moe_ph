@@ -22,7 +22,7 @@
 
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Posts: {tag} - tech.moe.ph</title>
 </svelte:head>
 
 <Posts posts={posts} tag={tag}/>

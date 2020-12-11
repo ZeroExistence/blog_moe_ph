@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<title>{post.title}</title>
+	<title>{post.title} - tech.moe.ph</title>
 </svelte:head>
 
 <Post post={post}/>

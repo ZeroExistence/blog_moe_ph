@@ -21,15 +21,6 @@
   div.container {
     @apply grid items-center gap-4;
   }
-  div.post {
-    @apply p-6;
-  }
-  h1 {
-    @apply text-3xl;
-  }
-  small {
-    @apply text-base;
-  }
   ul {
     @apply list-disc;
   }

@@ -15,7 +15,7 @@
 
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Tags - tech.moe.ph</title>
 </svelte:head>
 
 <List list={list}/>

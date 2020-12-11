@@ -37,7 +37,7 @@ https://svelte.dev/repl/03f0be0c4dc54eb4af5a168f644f5c31?version=3.19.1
 
 <style>
 	a {
-		@apply text-black pb-2;
+		@apply text-black pb-2 no-underline;
 	}
   text {
     fill: currentColor

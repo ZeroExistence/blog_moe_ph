@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Home Page - tech.moe.ph</title>
 </svelte:head>
 
 <Posts posts={posts}/>
