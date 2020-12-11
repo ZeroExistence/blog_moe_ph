@@ -1,20 +1,21 @@
 <script context="module">
 	export async function preload({ params }, session) {
-		return this.fetch(`${session.apiEndpoint}/`)
+		return this.fetch(`${session.apiEndpoint}/tag/`)
 			.then(r => r.json())
 			.then(response => {
-				return { posts: response };
+				return { list: response };
 			});
 	}
 </script>
 
 <script>
-	import Posts from '../components/Posts.svelte';
-	export let posts;
+	import List from '../../components/List.svelte';
+	export let list;
 </script>
+
 
 <svelte:head>
 	<title>Sapper project template</title>
 </svelte:head>
 
-<Posts posts={posts}/>
+<List list={list}/>
