@@ -1,4 +1,7 @@
 <script>
+	import { stores } from '@sapper/app';
+	const { page } = stores();
+
 	export let open = false;
 
   function triggerOpen() {
@@ -12,9 +15,9 @@ https://svelte.dev/repl/03f0be0c4dc54eb4af5a168f644f5c31?version=3.19.1
 -->
 <aside class="absolute lg:w-1/4 md:w-1/3 w-1/2 h-full bg-gray-200 border-r-2 shadow-lg" class:open>
 	<nav class="p-12 text-xl">
-		<a class="block" href="/" on:click={triggerOpen}>Home</a>
-		<a class="block" href="/post" on:click={triggerOpen}>Posts</a>
-		<a class="block" href="/tag" on:click={triggerOpen}>Tags</a>
+		<a rel="prefetch" class="block" href="/" on:click={triggerOpen}>Home</a>
+		<a rel="prefetch" class="block" href="/post" on:click={triggerOpen}>Posts</a>
+		<a rel="prefetch" class="block" href="/tag" on:click={triggerOpen}>Tags</a>
 	</nav>
 </aside>
 
@@ -29,7 +32,7 @@ https://svelte.dev/repl/03f0be0c4dc54eb4af5a168f644f5c31?version=3.19.1
   </button>
 
   <svg width=auto height=30>
-    <text x=0 y=20>tech.moe.ph</text>
+    <text x=0 y=20>{$page.host}</text>
   </svg>
 	</nav>
 </header>

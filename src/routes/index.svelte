@@ -9,12 +9,15 @@
 </script>
 
 <script>
+	import { stores } from '@sapper/app';
+	const { page } = stores();
+
 	import Posts from '../components/Posts.svelte';
 	export let posts;
 </script>
 
 <svelte:head>
-	<title>Home Page - tech.moe.ph</title>
+	<title>Home Page - {$page.host}</title>
 </svelte:head>
 
 <Posts posts={posts}/>

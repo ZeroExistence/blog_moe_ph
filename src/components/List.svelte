@@ -9,7 +9,7 @@
   <div class="posts">
     <ul>
     {#each list as item}
-      <a rel="prefetch" href="/tag/{item.slug}">
+      <a href="/tag/{item.slug}">
       <li>{item.name}</li>
       </a>
     {/each}
