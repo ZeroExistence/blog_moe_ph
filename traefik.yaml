@@ -1,0 +1,38 @@
+http:
+  routers:
+    blog-fe-secure:
+      entryPoints:
+      - "web-fe-secure"
+      rule: "Host(`blog.moe.ph`)"
+      priority: 1
+      service: "blog-fe-be"
+      middlewares:
+      - "blog-middleware"
+      tls: {}
+    blog-sw-secure:
+      entryPoints:
+      - "web-sw-secure"
+      rule: "Host(`blog.moe.ph`)"
+      priority: 1
+      service: "blog-sw-be"
+      middlewares:
+      - "blog-middleware"
+      tls: {}
+
+  middlewares:
+    blog-middleware:
+      headers:
+        sslProxyHeaders:
+          X-Forwarded-Proto: https
+
+  services:
+    blog-fe-be:
+      loadBalancer:
+        servers:
+        - url: "http://blog.moe.ph.local:3000/"
+        passHostHeader: true
+    blog-sw-be:
+      loadBalancer:
+        servers:
+        - url: "http://blog.moe.ph.local:10000/"
+        passHostHeader: true

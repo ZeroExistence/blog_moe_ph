@@ -1,0 +1,6 @@
+.git
+__sapper__
+node_modules
+build
+.dockerignore
+Dockerfile
