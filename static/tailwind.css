@@ -26,6 +26,15 @@ img {
   margin: auto;
   max-width: 100%;
 }
+ul {
+  @apply list-disc py-2 px-8;
+}
+ol {
+  @apply list-decimal py-2 px-8;
+}
+blockquote {
+  @apply border-l-8 border-gray-700 py-2 px-8 italic;
+}
 
 @tailwind components;
 @tailwind utilities;
