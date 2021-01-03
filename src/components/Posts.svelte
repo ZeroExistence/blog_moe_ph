@@ -10,13 +10,17 @@
   </div>
   {/if}
   <div class="posts">
-    {#each posts as post}
+    {#each posts as post, index}
     <div class="post">
       <a rel="prefetch" href="/post/{post.slug}">
       <h1>{post.title}</h1>
       </a>
       <small>{post.date}</small>
+      {#if index <= 2}
       <img src="{post.image.image}" alt="{post.image.caption}">
+      {:else}
+      <img src="{post.image.image}" loading="lazy" alt="{post.image.caption}">
+      {/if}
       <small>{post.intro}</small>
     </div>
     {/each}
