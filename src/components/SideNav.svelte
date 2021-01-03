@@ -18,6 +18,11 @@ https://svelte.dev/repl/03f0be0c4dc54eb4af5a168f644f5c31?version=3.19.1
 		<a rel="prefetch" class="block" href="/" on:click={triggerOpen}>Home</a>
 		<a rel="prefetch" class="block" href="/post" on:click={triggerOpen}>Posts</a>
 		<a rel="prefetch" class="block" href="/tag" on:click={triggerOpen}>Tags</a>
+		<p class="external">External Links</p>
+		<a class="block external" href="https://www.moe.ph">Home Page</a>
+		<a class="block external" href="https://blog.moe.ph">Blog</a>
+		<a class="block external" href="https://tech.moe.ph">Tech</a>
+		<a class="block external" href="https://finance.moe.ph">Finance</a>
 	</nav>
 </aside>
 
@@ -41,6 +46,12 @@ https://svelte.dev/repl/03f0be0c4dc54eb4af5a168f644f5c31?version=3.19.1
 <style>
 	a {
 		@apply text-black pb-2 no-underline;
+	}
+	a.external {
+		@apply text-black pb-2 no-underline text-sm;
+	}
+	p.external {
+		@apply text-black mb-2 text-sm border-b border-gray-700 mt-3;
 	}
   text {
     fill: currentColor
