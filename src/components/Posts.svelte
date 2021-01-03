@@ -32,7 +32,7 @@
 <div class="grid items-center pt-12">
   <nav class="relative z-0 inline-flex shadow-sm -space-x-px" aria-label="Pagination">
     {#if posts.previous != null}
-      <a rel="prefetch" href="/{posts.previous}" class="inline-flex items-center justify-center px-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+      <a rel="prefetch" href="{posts.previous}" class="inline-flex items-center justify-center px-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
             <span class="sr-only">Previous</span>
             <!-- Heroicon name: chevron-left -->
             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
