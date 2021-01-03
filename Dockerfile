@@ -1,6 +1,7 @@
+FROM node:15.2-alpine3.12 as BUILDER
+
 LABEL maintainer="admin@moe.ph"
 
-FROM node:15.2-alpine3.12 as BUILDER
 WORKDIR /app
 COPY . .
 RUN yarn install
