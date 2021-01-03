@@ -1,5 +1,4 @@
 FROM node:15.2-alpine3.12 as BUILDER
-
 LABEL maintainer="admin@moe.ph"
 
 WORKDIR /app
